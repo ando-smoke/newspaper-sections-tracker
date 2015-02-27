@@ -3,9 +3,21 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2>List of Sections:</h2>
+    <h2 ng-show="!sections.length"><em>No sections currently in system</em></h2>
+    <h2 ng-show="sections.length">List of Sections:</h2>
     <ul>
       <li ng-repeat="section in sections">{{ section.name }}</li>
     </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Add a new section:</h2>
+    <form ng-submit="addSection()" class="form-inline" role="form">
+      <div class="form-group">
+        <input type="text" ng-model="sectionName" class="form-control" placeholder="Enter a section name" />
+      </div>
+      <button type="submit" class="btn btn-primary">Add section</button>
+    </form>
   </div>
 </div>
