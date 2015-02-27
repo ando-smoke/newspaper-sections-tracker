@@ -11,4 +11,10 @@ newspaperSections.config(function($stateProvider) {
     templateUrl: "partials/sections.html",
     controller: 'SectionsCtrl'
   });
+
+  $stateProvider.state('sections.reporters', {
+    url: "/:sectionID",
+    templateUrl: "partials/sections.reporters.html",
+    controller: 'ReportersCtrl'
+  });
 });
