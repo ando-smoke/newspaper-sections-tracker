@@ -6,7 +6,9 @@
     <h2 ng-show="!sections.length"><em>No sections currently in system</em></h2>
     <h2 ng-show="sections.length">List of Sections:</h2>
     <ul>
-      <li ng-repeat="section in sections">{{ section.name }}</li>
+      <li ng-repeat="section in sections">
+        <a ui-sref="sections-detail({ sectionID: section.id })">{{ section.name }}</a>
+      </li>
     </ul>
   </div>
 </div>
@@ -21,3 +23,4 @@
     </form>
   </div>
 </div>
+<br />

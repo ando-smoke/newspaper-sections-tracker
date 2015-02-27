@@ -1,0 +1,15 @@
+<h1>{{ section.name }}</h1>
+<br />
+<div class="row">
+  <div class="col-md-12">
+    <h2>List of Reporters:</h2>
+    <ul>
+      <li ng-show="!section.reporters.length">
+        <em>No reporters currently in {{ section.name }}</em>
+      </li>
+      <li ng-repeat="reporter in section.reporters">
+        {{ reporter.displayName }}
+      </li>
+    <ul>
+  </div>
+</div>
