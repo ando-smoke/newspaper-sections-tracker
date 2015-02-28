@@ -14,6 +14,7 @@ newspaperSections.controller('ReportersCtrl',
       firstName: $scope.firstName,
       lastName: $scope.lastName,
       displayName: $scope.firstName + " " + $scope.lastName,
+      sortName: $scope.lastName + ", " + $scope.firstName,
       birthDate: $scope.birthDate,
       employmentYears: $scope.employmentYears,
       birthday: function() {
