@@ -13,7 +13,10 @@
             <em>No reporters currently in {{ section.name }}</em>
           </li>
           <li ng-repeat="reporter in section.reporters">
-            {{ reporter.displayName }}
+            <a ui-sref="reporter-detail({ sectionID: section.id,
+              reporterID: reporter.id })">
+              {{ reporter.displayName }}
+            </a>
           </li>
         </ul>
       </li>
