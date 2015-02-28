@@ -1,7 +1,7 @@
 <h1>{{ section.name }} Section</h1>
 <br />
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-4 well">
     <h2>List of Reporters:</h2>
     <ul>
       <li ng-show="!section.reporters.length">
@@ -17,7 +17,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-4 well">
     <h2>Add a new reporter:</h2>
     <form ng-submit="addReporter()" role="form">
       <div class="form-group">
@@ -41,4 +41,4 @@
   </div>
 </div>
 <br />
-<a ui-sref="sections" class="btn btn-link">Back to Section Summary</a>
+<a ui-sref="sections">Back to Sections Summary</a>

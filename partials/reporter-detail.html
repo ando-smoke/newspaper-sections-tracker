@@ -1,6 +1,8 @@
 <h1>{{ reporter.displayName }}</h1>
 <br />
-<h4>Birthday: {{ reporter.birthday() }}</h4>
-<h4>Years of Employment: {{ reporter.employmentYears }}</h4>
+<div class="col-md-4 well">
+  <h4>Birthday: {{ reporter.birthday() }}</h4>
+  <h4>Years of Employment: {{ reporter.employmentYears }}</h4>
+</div>
 <br />
-<a ui-sref="sections">Back to Section Summary</a>
+<a ui-sref="sections">Back to Sections Summary</a>
