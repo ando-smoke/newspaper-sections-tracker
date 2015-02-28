@@ -7,7 +7,7 @@
       <li ng-show="!section.reporters.length">
         <em>No reporters currently in {{ section.name }}</em>
       </li>
-      <li ng-repeat="reporter in section.reporters">
+      <li ng-repeat="reporter in section.reporters | orderBy: 'sortName'">
         <a ui-sref="reporter-detail({ sectionID: section.id,
           reporterID: reporter.id })">
           {{ reporter.displayName }}
