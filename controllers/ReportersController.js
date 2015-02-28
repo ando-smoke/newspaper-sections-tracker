@@ -15,7 +15,11 @@ newspaperSections.controller('ReportersCtrl',
       lastName: $scope.lastName,
       displayName: $scope.firstName + " " + $scope.lastName,
       birthDate: $scope.birthDate,
-      employmentYears: $scope.employmentYears
+      employmentYears: $scope.employmentYears,
+      birthday: function() {
+        return (this.birthDate.getMonth() + 1) +
+          "/" + this.birthDate.getDate()
+      }
     });
 
     $scope.firstName = null;

@@ -8,7 +8,10 @@
         <em>No reporters currently in {{ section.name }}</em>
       </li>
       <li ng-repeat="reporter in section.reporters">
-        {{ reporter.displayName }}
+        <a ui-sref="reporter-detail({ sectionID: section.id,
+          reporterID: reporter.id })">
+          {{ reporter.displayName }}
+        </a>
       </li>
     <ul>
   </div>
@@ -26,7 +29,7 @@
         <input id="last-name" type="text" ng-model="lastName" class="form-control" />
       </div>
       <div class="form-group">
-        <label for="birthday">Birthday:</label>
+        <label for="birthday">Birth date:</label>
         <input id="birthday" type="date" ng-model="birthDate" class="form-control" />
       </div>
       <div class="form-group">
