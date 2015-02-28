@@ -17,4 +17,10 @@ newspaperSections.config(function($stateProvider) {
     templateUrl: "partials/reporters.html",
     controller: 'ReportersCtrl'
   });
+
+  $stateProvider.state('reporter-detail', {
+    url: "/sections/:sectionID/reporters/:reporterID",
+    templateUrl: "partials/reporter-detail.html",
+    controller: 'ReportersCtrl'
+  });
 });
