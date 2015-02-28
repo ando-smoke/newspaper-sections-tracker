@@ -6,7 +6,7 @@
     <h2 ng-show="!sections.length"><em>No sections currently in system</em></h2>
     <h2 ng-show="sections.length">List of Sections and Reporters:</h2>
     <ul>
-      <li ng-repeat="section in sections">
+      <li ng-repeat="section in sections | orderBy:'name'">
         <a ui-sref="sections-detail({ sectionID: section.id })">{{ section.name }}</a>
         <ul>
           <li ng-show="!section.reporters.length">
